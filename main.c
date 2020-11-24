@@ -4,8 +4,7 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-
-	
+ 	
 int main(int argc, char *argv[]) {
 	
 	int gameboard [N][N]= {
@@ -45,6 +44,10 @@ int main(int argc, char *argv[]) {
 	
 	int total_black;
 	int total_white;
+	
+    int check_full;
+	int a,b;
+	
 	
 	printf("white is number1, black is number2, empty space is 0\n");//검은색 하얀색을 숫자로 대신함. 
 	printf("Refer to the following coordinate of gameboard.\n"); 
@@ -122,8 +125,30 @@ int main(int argc, char *argv[]) {
 		 flipnum_east, flipnum_west, flipnum_north, flipnum_south, flipnum_northeast, flipnum_northwest, flipnum_southeast, flipnum_southwest);
 		
 		printf("you have flipped %d othellos\n", flip_number); 
+		
 		 
-	    turn ++;
+	    
+	    
+	    
+	    for(a=0;a<N; a++)
+	    {
+		   for(b=0; b<N; b++)
+		
+		   if(gameboard[a][b]!=0)
+	    {
+		  check_full++;
+	    } 
+	   }
+	
+	   if(check_full==N*N)
+	    break;
+	
+	   else
+	     turn ++; //게임판이 가득 차서 끝나게 하는 함수, 1이면 게임끝나게 설정함. 
+	
+	    
+	    
+	    
 	    
 	    
 	     if (turn== 2)  //검은색 돌을 놓을 차례 
@@ -134,9 +159,15 @@ int main(int argc, char *argv[]) {
 		//위에 하얀색 코딩한 거 복사 붙여넣기 
 		 
 		turn --;
-		
-		
-    	}
+		}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	/*이제 누가 이겼는지 결과 확인*/ 
@@ -163,7 +194,7 @@ int main(int argc, char *argv[]) {
 		}
 	} //따로 실행해본 결과 검은색 개수가 이상하게 나옴. 다시 확인해볼 것 
 		
-    printf("Number of Black Othello is %d\n", total_black);
+    printf("Number of Black Othello is %d\n", total_black); //검은색 돌 하얀색 돌 각각 개수 확 인 
 		
     if(total_white > total_black)
 	{
@@ -178,7 +209,7 @@ int main(int argc, char *argv[]) {
     else 
 	{
 		printf("There is no winner or loser\n");
-	}
+	} //승패 결 과 
 	
 	return 0;
 }
