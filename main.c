@@ -3,6 +3,86 @@
 #define N 6
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
+void flipwhite_east(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_east;
+	
+	if(gameboard[y][x+1] ==2 && gameboard[y][x+2]==1)
+	{
+		gameboard[y][x+1]=1;
+		flipnum_east +=1;
+	}
+	
+	else if(gameboard[y][x+1] ==2 && gameboard[y][x+2]==2 && gameboard[y][x+3]==1)
+	{
+		gameboard[y][x+1]=1;
+		gameboard[y][x+2]=1;
+		flipnum_east +=2;
+	}
+	
+	else if(gameboard[y][x+1] ==2 && gameboard[y][x+2]==2 && gameboard[y][x+3]==2 && gameboard[y][x+4]==1)
+	{
+		gameboard[y][x+1]=1;
+		gameboard[y][x+2]=1;
+		gameboard[y][x+3]=1;
+		flipnum_east +=3;
+	}
+	
+	else if(gameboard[y][x+1] ==2 && gameboard[y][x+2]==2 && gameboard[y][x+3]==2 && gameboard[y][x+4]==2 && gameboard[y][x+5]==1)
+	{
+		gameboard[y][x+1]=1;
+		gameboard[y][x+2]=1;
+		gameboard[y][x+3]=1;
+		gameboard[y][x+4]=1;
+		flipnum_east +=4;
+	}
+	
+	else
+	   flipnum_east = 0;
+} 
+
+void flipwhite_west(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_west;
+	
+	if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==1)
+	{
+		gameboard[y][x-1]=1;
+		flipnum_west +=1;
+	}
+	
+	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==2 && gameboard[y][x-3]==1)
+	{
+		gameboard[y][x-1] =1;
+		gameboard[y][x-2] =1;
+		flipnum_west +=2;
+	}
+	
+	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==2 && gameboard[y][x-3]==2 && gameboard[y][x-4]==1)
+	{
+		gameboard[y][x-1] =1;
+		gameboard[y][x-2] =1;
+		gameboard[y][x-3] =1;
+		flipnum_west +=3;
+	}
+	
+	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==2 && gameboard[y][x-3]==2 && gameboard[y][x-4]==2 && gameboard[y][x-5]==1)
+	{
+		gameboard[y][x-1]=1;
+		gameboard[y][x-2]=1;
+		gameboard[y][x-3]=1;
+		gameboard[y][x-4]=1;
+		flipnum_west +=4;
+	}
+	
+	else
+	   flipnum_west = 0;
+} 
+
 
  	
 int main(int argc, char *argv[]) {
@@ -42,9 +122,13 @@ int main(int argc, char *argv[]) {
 	int flipnum_southeast;
 	int flipnum_southwest;
 	
+	int count_black;
+	int count_white;
+	
 	int total_black;
 	int total_white;
 	
+	int Gameend_full;
     int check_full;
 	int a,b;
 	
@@ -69,21 +153,41 @@ int main(int argc, char *argv[]) {
     	printf("\n");
 	} //게임판 초기 상태 출력  
 	 
-	//game 종료 조건 적 기  
 	
-	while(1)
+	
+	while(Gameend_full ==0)
 	
 	{
-	  if (turn==1)  //하얀색 돌을 놓을 차례 
+		for(a=0;a<N; a++)
+	    {
+		   for(b=0; b<N; b++)
+		
+		   if(gameboard[a][b]!=0)
+	       
+		      check_full++;    
+	    }
+	
+	    if(check_full==N*N)
+	     Gameend_full= 1;
+	
+	    else
+	     Gameend_full = 0; //게임판이 가득 차서 끝나게 하는 함수, 1이면 게임끝나게 설정함. 
+	     
+	     
+	     
+	     
+	    if (turn==1)
+		{  //하얀색 돌을 놓을 차례 
 	  
-	    // for문을 돌려서 게임보드에 0(빈 공간)이 있는 지 먼저 확인 없으면 break걸 기 
+	   
 	    
        //flip이 가능한지 여부 먼저 파악 
     
     /*flip이 불가능한 경우 turn을 2로 바꿈 */
-    printf("There is no space available for new white othello.\n");
-    printf("So the turn goes to black player.\n");
-    turn=2; break;
+        printf("There is no space available for new white othello.\n");
+        printf("So the turn goes to black player.\n");
+        turn=2; break;
+	 
 	 
     /*flip이 가능한 경우*/ 
         printf("This is current state.\n");
@@ -94,57 +198,68 @@ int main(int argc, char *argv[]) {
     	     printf("%d", gameboard[i][j]);
     	   printf("\n");
 	     } //게임판 출력  
+	     
+	     for(i=0;i<N;i++)
+         {
+    	    for(j=0;j<N;j++)
+    	
+    	    if(gameboard [i][j] ==1)
+    	    
+    		count_white++;
+		}
 	
-	    {
+	    printf("Current number of White Othello is %d\n", count_white); //현재 상태 하얀돌 개수 
+	 
+	 
+	    for(i=0;i<N;i++)
+        {
+    	    for(j=0;j<N;j++)
+    	
+    	    if(gameboard [i][j] ==2)
+    	
+    		count_black++;
+		} //따로 실행해본 결과 검은색 개수가 이상하게 나옴. 다시 확인해볼 것 
+		
+        printf("Current number of Black Othello is %d\n", count_black); //검은색 돌 하얀색 돌 각각 개수 확 인 
+        printf("\n");
+        
+	    
+	    
 		printf("Put new white(1) othello.\n");
 	    scanf("%d %d", gameboard[y][x]);
-	    }
 	    
-		else (gameboard[y][x] !=0)
-	    {
+		if (gameboard[y][x] ==0)
 	    	printf("You have placed othello on wrong spot. Try again. (already occupied) \n"); //다른 오델로가 이미 있는 곳에 오델로를 놓을려고 한 경우, 다시하세요. 
-		}
-		 
+여기 고치 
+		else 
+		     
 		
 		/*플레이어가 입력한 곳이flip 이 불가능하다면, 다시 시대해보세요 출력*/
 		
 		/*플레이어가 입력한 곳이 flip이 가능하다면, flip 하고 그 횟수 출력*/
 		
-		flip_number = flipnum_east + flipnum_west + flipnum_north + flipnum_south + flipnum_northeast + flipnum_northwest + flipnum_southeast + flipnum_southwest;
+		    flip_number = flipnum_east + flipnum_west + flipnum_north + flipnum_south + flipnum_northeast + flipnum_northwest + flipnum_southeast + flipnum_southwest;
 		
-		printf("Result of this turn.\n");
+		    printf("Result of this turn.\n");
 		
-		for(i=0; i<N; i++)
-         {
+		    for(i=0; i<N; i++)
+            {
     	   for(j=0; j<N; j++)
     	     printf("%d", gameboard[i][j]);
     	   printf("\n");
-	     }
+	        }
 	     
-		printf("East: %d, West: %d, North: %d, South: %d, Northeast: %d, Northwest: %d, Southeast: %d, Southwest: %d\n", 
-		 flipnum_east, flipnum_west, flipnum_north, flipnum_south, flipnum_northeast, flipnum_northwest, flipnum_southeast, flipnum_southwest);
+		    printf("East: %d, West: %d, North: %d, South: %d, Northeast: %d, Northwest: %d, Southeast: %d, Southwest: %d\n", 
+		    flipnum_east, flipnum_west, flipnum_north, flipnum_south, flipnum_northeast, flipnum_northwest, flipnum_southeast, flipnum_southwest);
 		
-		printf("you have flipped %d othellos\n", flip_number); 
+	 	    printf("you have flipped %d othellos\n", flip_number); 
 		
-		 
-	    
-	    
-	    
-	    for(a=0;a<N; a++)
-	    {
-		   for(b=0; b<N; b++)
 		
-		   if(gameboard[a][b]!=0)
-	    {
-		  check_full++;
-	    } 
-	   }
-	
-	   if(check_full==N*N)
-	    break;
-	
-	   else
-	     turn ++; //게임판이 가득 차서 끝나게 하는 함수, 1이면 게임끝나게 설정함. 
+		
+		 turn ++; 
+	    
+	    }
+	    
 	
 	    
 	    
@@ -163,7 +278,7 @@ int main(int argc, char *argv[]) {
 	
 	
 	
-	
+    }
 	
 	
 	
@@ -181,7 +296,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	
-	printf("Number of White Othello is %d\n", total_white);
+	printf("Total number of White Othello is %d\n", total_white);
 	 
 	 
 	 for(i=0;i<N;i++)
@@ -194,7 +309,7 @@ int main(int argc, char *argv[]) {
 		}
 	} //따로 실행해본 결과 검은색 개수가 이상하게 나옴. 다시 확인해볼 것 
 		
-    printf("Number of Black Othello is %d\n", total_black); //검은색 돌 하얀색 돌 각각 개수 확 인 
+    printf("Total number of Black Othello is %d\n", total_black); //검은색 돌 하얀색 돌 각각 개수 확 인 
 		
     if(total_white > total_black)
 	{
