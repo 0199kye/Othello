@@ -1216,7 +1216,7 @@ int main(int argc, char *argv[]) {
 			
 		    flip1_number = nflipwhite_east(gameboard[N][N], y,x) + nflipwhite_west(gameboard[N][N], y,x) + nflipwhite_north(gameboard[N][N], y,x) + 
 				    nflipwhite_south(gameboard[N][N], y,x) +  nflipwhite_northeast(gameboard[N][N], y,x) + nflipwhite_northwest(gameboard[N][N], y,x)
-					 + nflipwhite_southeast(gameboard[N][N], y,x) +nflipwhite_southeast(gameboard[N][N], y,x )) ;
+					 + nflipwhite_southeast(gameboard[N][N], y,x) +nflipwhite_southeast(gameboard[N][N], y,x ) ;
 		
 		    printf("Result of this turn.\n");
 		
@@ -1230,7 +1230,7 @@ int main(int argc, char *argv[]) {
 		    printf("East: %d, West: %d, North: %d, South: %d, Northeast: %d, Northwest: %d, Southeast: %d, Southwest: %d\n", 
 		    nflipwhite_east(gameboard[N][N], y,x),nflipwhite_west(gameboard[N][N], y,x), nflipwhite_north(gameboard[N][N], y,x), 
 				    nflipwhite_south(gameboard[N][N], y,x),  nflipwhite_northeast(gameboard[N][N], y,x), nflipwhite_northwest(gameboard[N][N], y,x),
-					 nflipwhite_southeast(gameboard[N][N], y,x), nflipwhite_southeast(gameboard[N][N], y,x )==0) );
+					 nflipwhite_southeast(gameboard[N][N], y,x), nflipwhite_southeast(gameboard[N][N], y,x )==0);
 		
 	 	    printf("you have flipped %d othellos\n", flip1_number); 
 		
@@ -1254,7 +1254,7 @@ int main(int argc, char *argv[]) {
 				
 		    	if (nflipblack_east(gameboard[N][N], y,x) ==0 && nflipblack_west(gameboard[N][N], y,x) == 0 && nflipblack_north(gameboard[N][N], y,x) == 0 && 
 			    	nflipblack_south(gameboard[N][N], y,x) == 0 && nflipblack_northeast(gameboard[N][N], y,x == 0 && nflipblack_southeast(gameboard[N][N], y,x) == 0 
-					&& nflipblack_northwest(gameboard[N][N], y,x) == 0 && nflipblack_southwest(gameboard[N][N], y,x) == 0 ) 
+					&& nflipblack_northwest(gameboard[N][N], y,x) == 0 && nflipblack_southwest(gameboard[N][N], y,x) == 0 ) )
 				    
 		            turn =1;
 			}
@@ -1294,18 +1294,26 @@ int main(int argc, char *argv[]) {
 	       scanf("%d %d", &y,&x); //좌표입력 받 기
 		
 	    
-		  if (x<0 || X>5 || y<0 || y<5)
-	    	printf("Wrong coordinate. Try again: \n");
+		  if (x<0 || x>5 || y<0 || y<5)
+		  {
+		  	printf("Wrong coordinate. Try again: \n");
 			scanf("%d %d", &y,&x);
+		  }
+	    
 			
 		  else if(gameboard[y][x] !=0) 
-		    printf("Already occupied. Try again: \n");
+		  {
+		  	printf("Already occupied. Try again: \n");
 		    scanf("%d %d", &y,&x);
-		     
-		   else if(flipnum1_east == 0 && flipnum1_west == 0 && flipnum1_north == 0 && flipnum1_south == 0 && 
-				    flipnum1_northeast == 0 && flipnum1_northwest == 0 && flipnum1_southeast == 0 && flipnum1_southwest == 0 ) 
-		    printf("No possible flip. Try again: \n");
+		  }
+		    
+		   else if (nflipblack_east(gameboard[N][N], y,x) ==0 && nflipblack_west(gameboard[N][N], y,x) == 0 && nflipblack_north(gameboard[N][N], y,x) == 0 && 
+			    	nflipblack_south(gameboard[N][N], y,x) == 0 && nflipblack_northeast(gameboard[N][N], y,x == 0 && nflipblack_southeast(gameboard[N][N], y,x) == 0 
+					&& nflipblack_northwest(gameboard[N][N], y,x) == 0 && nflipblack_southwest(gameboard[N][N], y,x) == 0 ) )
+		   {
+		   	printf("No possible flip. Try again: \n");
 		    scanf("%d %d", &y, &x); //좌표 입력에 오류가 있을 경우, 다시 받기 
+			} 
 		    
 		    
 		
@@ -1314,7 +1322,7 @@ int main(int argc, char *argv[]) {
 			
 		    flip2_number=nflipblack_east(gameboard[N][N], y,x) + nflipblack_west(gameboard[N][N], y,x) + nflipblack_north(gameboard[N][N], y,x) + 
 			    	nflipblack_south(gameboard[N][N], y,x) + nflipblack_northeast(gameboard[N][N], y,x) + nflipblack_southeast(gameboard[N][N], y,x)  +
-				    nflipblack_northwest(gameboard[N][N], y,x) + nflipblack_southwest(gameboard[N][N], y,x)  ) 
+				    nflipblack_northwest(gameboard[N][N], y,x) + nflipblack_southwest(gameboard[N][N], y,x)  ;
 			
 		    printf("Result of this turn.\n");
 		
@@ -1327,8 +1335,8 @@ int main(int argc, char *argv[]) {
 	     
 		    printf("East: %d, West: %d, North: %d, South: %d, Northeast: %d, Northwest: %d, Southeast: %d, Southwest: %d\n", 
 		    nflipblack_east(gameboard[N][N], y,x) , nflipblack_west(gameboard[N][N], y,x), nflipblack_north(gameboard[N][N], y,x) , 
-			    	nflipblack_south(gameboard[N][N], y,x) , nflipblack_northeast(gameboard[N][N], y,x) , nflipblack_southeast(gameboard[N][N], y,x,)  ,
-				    nflipblack_northwest(gameboard[N][N], y,x) , nflipblack_southwest(gameboard[N][N], y,x)  ) );
+			    	nflipblack_south(gameboard[N][N], y,x) , nflipblack_northeast(gameboard[N][N], y,x) , nflipblack_southeast(gameboard[N][N], y,x)  ,
+				    nflipblack_northwest(gameboard[N][N], y,x) , nflipblack_southwest(gameboard[N][N], y,x)  );
 		
 	 	    printf("you have flipped %d othellos\n", flip2_number); 
 		
@@ -1374,5 +1382,3 @@ int main(int argc, char *argv[]) {
 		printf("There is no winner or loser\n");
 	} //승패 결 과 
 	
-	return 0;
-}
