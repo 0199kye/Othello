@@ -3,7 +3,7 @@
 #define N 6
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-int flipwhite_east(int gameboard[N][N], int y, int x)
+int flipwhite(int gameboard[N][N], int y, int x)
 {
 	if(gameboard[y][x+1] ==2 && gameboard[y][x+2]==1)
 	{
@@ -30,8 +30,190 @@ int flipwhite_east(int gameboard[N][N], int y, int x)
 		gameboard[y][x+3]=1;
 		gameboard[y][x+4]=1;
 	}
+	
+	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==1)
+	{
+		gameboard[y][x-1]=1;
+	}
+	
+	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==2 && gameboard[y][x-3]==1)
+	{
+		gameboard[y][x-1] =1;
+		gameboard[y][x-2] =1;
+	}
+	
+	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==2 && gameboard[y][x-3]==2 && gameboard[y][x-4]==1)
+	{
+		gameboard[y][x-1] =1;
+		gameboard[y][x-2] =1;
+		gameboard[y][x-3] =1;
+	}
+	
+	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==2 && gameboard[y][x-3]==2 && gameboard[y][x-4]==2 && gameboard[y][x-5]==1)
+	{
+		gameboard[y][x-1]=1;
+		gameboard[y][x-2]=1;
+		gameboard[y][x-3]=1;
+		gameboard[y][x-4]=1;
+	}
+	
+	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==1)
+	{
+		gameboard[y-1][x]=1;
+	}
+	
+	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==2 && gameboard[y-3][x]==1)
+	{
+		gameboard[y-1][x] =1;
+		gameboard[y-2][x]=1;
+	}
+	
+	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==2 && gameboard[y-3][x]==2 && gameboard[y-4][x]==1)
+	{
+		gameboard[y-1][x] =1;
+		gameboard[y-2][x]=1;
+		gameboard[y-3][x]=1;
+	}
+	
+	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==2 && gameboard[y-3][x]==2 && gameboard[y-4][x]==2 && gameboard[y-5][x]==1)
+	{
+		gameboard[y-1][x] =1;
+		gameboard[y-2][x]=1;
+		gameboard[y-3][x]=1;
+		gameboard[y-4][x]=1; 
+	}
+	
+	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==1)
+	{
+		gameboard[y+1][x]=1;
+	}
+	
+	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==2 && gameboard[y+3][x]==1)
+	{
+		gameboard[y+1][x] =1;
+		gameboard[y+2][x]=1;
+	}
+	
+	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==2 && gameboard[y+3][x]==2 && gameboard[y+4][x]==1)
+	{
+		gameboard[y+1][x] =1;
+		gameboard[y+2][x]=1;
+		gameboard[y+3][x]=1;
+	}
+	
+	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==2 && gameboard[y+3][x]==2 && gameboard[y+4][x]==2 && gameboard[y+5][x]==1 )
+	{
+		gameboard[y+1][x] =1;
+		gameboard[y+2][x]=1;
+		gameboard[y+3][x]=1;
+		gameboard[y+4][x]=1; 
+	}
+	
+	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==1)
+	{
+		gameboard[y-1][x+1]=1;
+	}
+	
+	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==1)
+	{
+		gameboard[y-1][x+1] =1;
+		gameboard[y-2][x+2]= 1;
+	}
+	
+	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==2 && gameboard[y-4][x+4]==1)
+	{
+		gameboard[y-1][x+1] =1;
+		gameboard[y-2][x+2]= 1;
+		gameboard[y-3][x+3]=1;
+	}
+	
+	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==2 && gameboard[y-4][x+4]==2 && gameboard[y-5][x+5]==1)
+	{
+		gameboard[y-1][x+1] =1;
+		gameboard[y-2][x+2]= 1;
+		gameboard[y-3][x+3]=1;
+		gameboard[y-4][x+4]=1;
+	}
+
+	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==1)
+	{
+		gameboard[y-1][x-1]=1;
+	}
+	
+	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==1)
+	{
+		gameboard[y-1][x-1] =1;
+		gameboard[y-2][x-2]= 1;
+	}
+	
+	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==2 && gameboard[y-4][x-4]==1)
+	{
+		gameboard[y-1][x-1] =1;
+		gameboard[y-2][x-2]= 1;
+		gameboard[y-3][x-3]=1;
+	}
+	
+	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==2 && gameboard[y-4][x-4]==2 && gameboard[y-5][x-5]==1)
+	{
+		gameboard[y-1][x-1] =1;
+		gameboard[y-2][x-2]= 1;
+		gameboard[y-3][x-3]=1;
+		gameboard[y-4][x-4]=1;
+	}
+
+	if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==1)
+	{
+		gameboard[y+1][x+1]=1;
+	}
+	
+	else if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==2 && gameboard[y+3][x+3]==1)
+	{
+		gameboard[y+1][x+1] =1;
+		gameboard[y+2][x+2]= 1;
+	}
+	
+	else if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==2 && gameboard[y+3][x+3]==2 && gameboard[y+4][x+4]==1)
+	{
+		gameboard[y+1][x+1] =1;
+		gameboard[y+2][x+2]= 1;
+		gameboard[y+3][x+3]=1;
+	}
+	
+	else if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==2 && gameboard[y+3][x+3]==2 && gameboard[y+4][x+4]==2 && gameboard[y+5][x+5]==1)
+	{
+		gameboard[y+1][x+1] =1;
+		gameboard[y+2][x+2]= 1;
+		gameboard[y+3][x+3]=1;
+		gameboard[y+4][x+4]=1;
+	}
+	
+	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==1)
+	{
+		gameboard[y+1][x-1]=1;
+	}
+	
+	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==2 && gameboard[y+3][x-3]==1)
+	{
+		gameboard[y+1][x-1] =1;
+		gameboard[y+2][x-2]= 1;
+	}
+	
+	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==2 && gameboard[y+3][x-3]==2 && gameboard[y+4][x-4]==1)
+	{
+		gameboard[y+1][x-1] =1;
+		gameboard[y+2][x-2]= 1;
+		gameboard[y+3][x-3]=1;
+	}
+	
+	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==2 && gameboard[y+3][x-3]==2 && gameboard[y+4][x-4]==2 && gameboard[y+5][x-5]==1)
+	{
+		gameboard[y+1][x-1] =1;
+		gameboard[y+2][x-2]= 1;
+		gameboard[y+3][x-3]=1;
+		gameboard[y+4][x-4]=1;
+	}
 	return gameboard[N][N];
-} 
+}
 
 int nflipwhite_east(int gameboard[N][N], int y, int x)
 {
@@ -73,35 +255,6 @@ int nflipwhite_east(int gameboard[N][N], int y, int x)
 	return flipnum;
 } 
 
-int flipwhite_west(int gameboard[N][N], int y, int x)
-{	
-	if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==1)
-	{
-		gameboard[y][x-1]=1;
-	}
-	
-	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==2 && gameboard[y][x-3]==1)
-	{
-		gameboard[y][x-1] =1;
-		gameboard[y][x-2] =1;
-	}
-	
-	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==2 && gameboard[y][x-3]==2 && gameboard[y][x-4]==1)
-	{
-		gameboard[y][x-1] =1;
-		gameboard[y][x-2] =1;
-		gameboard[y][x-3] =1;
-	}
-	
-	else if(gameboard[y][x-1] ==2 && gameboard[y][x-2]==2 && gameboard[y][x-3]==2 && gameboard[y][x-4]==2 && gameboard[y][x-5]==1)
-	{
-		gameboard[y][x-1]=1;
-		gameboard[y][x-2]=1;
-		gameboard[y][x-3]=1;
-		gameboard[y][x-4]=1;
-	}
-    return gameboard[N][N];
-} 
 
 int nflipwhite_west(int gameboard[N][N], int y, int x)
 {
@@ -143,36 +296,7 @@ int nflipwhite_west(int gameboard[N][N], int y, int x)
 	return flipnum;
 } 
 
-int flipwhite_north(int gameboard[N][N], int y, int x)
-{
-	
-	if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==1)
-	{
-		gameboard[y-1][x]=1;
-	}
-	
-	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==2 && gameboard[y-3][x]==1)
-	{
-		gameboard[y-1][x] =1;
-		gameboard[y-2][x]=1;
-	}
-	
-	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==2 && gameboard[y-3][x]==2 && gameboard[y-4][x]==1)
-	{
-		gameboard[y-1][x] =1;
-		gameboard[y-2][x]=1;
-		gameboard[y-3][x]=1;
-	}
-	
-	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==2 && gameboard[y-3][x]==2 && gameboard[y-4][x]==2 && gameboard[y-5][x]==1)
-	{
-		gameboard[y-1][x] =1;
-		gameboard[y-2][x]=1;
-		gameboard[y-3][x]=1;
-		gameboard[y-4][x]=1; 
-	}
-	return gameboard[N][N];
-} 
+
 
 int nflipwhite_north(int gameboard[N][N], int y, int x)
 {
@@ -214,37 +338,6 @@ int nflipwhite_north(int gameboard[N][N], int y, int x)
 	return flipnum;
 } 
 
-int flipwhite_south(int gameboard[N][N], int y, int x)
-{
-	
-	if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==1)
-	{
-		gameboard[y+1][x]=1;
-	}
-	
-	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==2 && gameboard[y+3][x]==1)
-	{
-		gameboard[y+1][x] =1;
-		gameboard[y+2][x]=1;
-	}
-	
-	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==2 && gameboard[y+3][x]==2 && gameboard[y+4][x]==1)
-	{
-		gameboard[y+1][x] =1;
-		gameboard[y+2][x]=1;
-		gameboard[y+3][x]=1;
-	}
-	
-	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==2 && gameboard[y+3][x]==2 && gameboard[y+4][x]==2 && gameboard[y+5][x]==1 )
-	{
-		gameboard[y+1][x] =1;
-		gameboard[y+2][x]=1;
-		gameboard[y+3][x]=1;
-		gameboard[y+4][x]=1; 
-	}
-	
-	return gameboard[N][N];
-} 
 
 int nflipwhite_south(int gameboard[N][N], int y, int x)
 {
@@ -284,37 +377,6 @@ int nflipwhite_south(int gameboard[N][N], int y, int x)
 	   flipnum= 0;
 	   
 	return flipnum;
-} 
-
-int flipwhite_northeast(int gameboard[N][N], int y, int x)
-{
-	
-	if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==1)
-	{
-		gameboard[y-1][x+1]=1;
-	}
-	
-	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==1)
-	{
-		gameboard[y-1][x+1] =1;
-		gameboard[y-2][x+2]= 1;
-	}
-	
-	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==2 && gameboard[y-4][x+4]==1)
-	{
-		gameboard[y-1][x+1] =1;
-		gameboard[y-2][x+2]= 1;
-		gameboard[y-3][x+3]=1;
-	}
-	
-	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==2 && gameboard[y-4][x+4]==2 && gameboard[y-5][x+5]==1)
-	{
-		gameboard[y-1][x+1] =1;
-		gameboard[y-2][x+2]= 1;
-		gameboard[y-3][x+3]=1;
-		gameboard[y-4][x+4]=1;
-	}
-	return gameboard[N][N];
 } 
 
 int nflipwhite_northeast(int gameboard[N][N], int y, int x)
@@ -357,36 +419,6 @@ int nflipwhite_northeast(int gameboard[N][N], int y, int x)
 	return flipnum;
 } 
 
-int flipwhite_northwest(int gameboard[N][N], int y, int x)
-{
-	if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==1)
-	{
-		gameboard[y-1][x-1]=1;
-	}
-	
-	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==1)
-	{
-		gameboard[y-1][x-1] =1;
-		gameboard[y-2][x-2]= 1;
-	}
-	
-	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==2 && gameboard[y-4][x-4]==1)
-	{
-		gameboard[y-1][x-1] =1;
-		gameboard[y-2][x-2]= 1;
-		gameboard[y-3][x-3]=1;
-	}
-	
-	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==2 && gameboard[y-4][x-4]==2 && gameboard[y-5][x-5]==1)
-	{
-		gameboard[y-1][x-1] =1;
-		gameboard[y-2][x-2]= 1;
-		gameboard[y-3][x-3]=1;
-		gameboard[y-4][x-4]=1;
-	}
-	return gameboard[N][N];
-} 
-
 int nflipwhite_northwest(int gameboard[N][N], int y, int x)
 {
 	int flipnum;
@@ -427,35 +459,6 @@ int nflipwhite_northwest(int gameboard[N][N], int y, int x)
 	return flipnum;
 } 
 
-int flipwhite_southeast(int gameboard[N][N], int y, int x)
-{
-	if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==1)
-	{
-		gameboard[y+1][x+1]=1;
-	}
-	
-	else if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==2 && gameboard[y+3][x+3]==1)
-	{
-		gameboard[y+1][x+1] =1;
-		gameboard[y+2][x+2]= 1;
-	}
-	
-	else if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==2 && gameboard[y+3][x+3]==2 && gameboard[y+4][x+4]==1)
-	{
-		gameboard[y+1][x+1] =1;
-		gameboard[y+2][x+2]= 1;
-		gameboard[y+3][x+3]=1;
-	}
-	
-	else if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==2 && gameboard[y+3][x+3]==2 && gameboard[y+4][x+4]==2 && gameboard[y+5][x+5]==1)
-	{
-		gameboard[y+1][x+1] =1;
-		gameboard[y+2][x+2]= 1;
-		gameboard[y+3][x+3]=1;
-		gameboard[y+4][x+4]=1;
-	}
-	return gameboard[N][N];
-} 
 
 int nflipwhite_southeast(int gameboard[N][N], int y, int x)
 {
@@ -497,35 +500,6 @@ int nflipwhite_southeast(int gameboard[N][N], int y, int x)
 	return flipnum;
 } 
 
-int flipwhite_southwest(int gameboard[N][N], int y, int x)
-{
-	if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==1)
-	{
-		gameboard[y+1][x-1]=1;
-	}
-	
-	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==2 && gameboard[y+3][x-3]==1)
-	{
-		gameboard[y+1][x-1] =1;
-		gameboard[y+2][x-2]= 1;
-	}
-	
-	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==2 && gameboard[y+3][x-3]==2 && gameboard[y+4][x-4]==1)
-	{
-		gameboard[y+1][x-1] =1;
-		gameboard[y+2][x-2]= 1;
-		gameboard[y+3][x-3]=1;
-	}
-	
-	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==2 && gameboard[y+3][x-3]==2 && gameboard[y+4][x-4]==2 && gameboard[y+5][x-5]==1)
-	{
-		gameboard[y+1][x-1] =1;
-		gameboard[y+2][x-2]= 1;
-		gameboard[y+3][x-3]=1;
-		gameboard[y+4][x-4]=1;
-	}
-	return gameboard[N][N];
-}
 
 int nflipwhite_southwest(int gameboard[N][N], int y, int x)
 {
@@ -567,7 +541,7 @@ int nflipwhite_southwest(int gameboard[N][N], int y, int x)
 	return flipnum;
 }//하얀색 8방향에 대한 뒤집기 과 뒤집힌 돌 개수 세기 
 
-int flipblack_east(int gameboard[N][N], int y, int x)
+int flipblack(int gameboard[N][N], int y, int x)
 {
 	
 	if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==2)
@@ -596,54 +570,8 @@ int flipblack_east(int gameboard[N][N], int y, int x)
 		gameboard[y][x+4]=2;
 	}
 	
-	return gameboard[N][N];
-} 
-
-int nflipblack_east(int gameboard[N][N], int y, int x)
-{
-	int flipnum;
 	
-	if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==2)
-	{
-		gameboard[y][x+1]=2;
-		flipnum +=1;
-	}
-	
-	else if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==1 && gameboard[y][x+3]==2)
-	{
-		gameboard[y][x+1]=2;
-		gameboard[y][x+2]=2;
-		flipnum+=2;
-	}
-	
-	else if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==1 && gameboard[y][x+3]==1 && gameboard[y][x+4]==2)
-	{
-		gameboard[y][x+1]=2;
-		gameboard[y][x+2]=2;
-		gameboard[y][x+3]=2;
-		flipnum +=3;
-	}
-	
-	else if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==1 && gameboard[y][x+3]==1 && gameboard[y][x+4]==1 && gameboard[y][x+5]==2)
-	{
-		gameboard[y][x+1]=2;
-		gameboard[y][x+2]=2;
-		gameboard[y][x+3]=2;
-		gameboard[y][x+4]=2;
-		flipnum+=4;
-	}
-	
-	else
-	   flipnum= 0;
-	   
-	return flipnum;
-	
-} 
-
-int flipblack_west(int gameboard[N][N], int y, int x)
-{
-	
-	if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==2)
+	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==2)
 	{
 		gameboard[y][x-1]=2;
 	}
@@ -669,52 +597,7 @@ int flipblack_west(int gameboard[N][N], int y, int x)
 		gameboard[y][x-4]=2;
 	}
 	
-	return gameboard[N][N];
-} 
-
-int nflipblack_west(int gameboard[N][N], int y, int x)
-{
-	int flipnum;
-	
-	if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==2)
-	{
-		gameboard[y][x-1]=2;
-		flipnum +=1;
-	}
-	
-	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==1 && gameboard[y][x-3]==2)
-	{
-		gameboard[y][x-1] =2;
-		gameboard[y][x-2] =2;
-		flipnum +=2;
-	}
-	
-	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==1 && gameboard[y][x-3]==1 && gameboard[y][x-4]==2)
-	{
-		gameboard[y][x-1] =2;
-		gameboard[y][x-2] =2;
-		gameboard[y][x-3] =2;
-		flipnum +=3;
-	}
-	
-	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==1 && gameboard[y][x-3]==1 && gameboard[y][x-4]==1 && gameboard[y][x-5]==2)
-	{
-		gameboard[y][x-1]=2;
-		gameboard[y][x-2]=2;
-		gameboard[y][x-3]=2;
-		gameboard[y][x-4]=2;
-		flipnum+=4;
-	}
-	
-	else
-	   flipnum = 0;
-	   
-	return flipnum;
-} 
-
-int flipblack_north(int gameboard[N][N], int y, int x) 
-{
-	if(gameboard[y-1][x] ==1 && gameboard[y-2][x]==2)
+	else if(gameboard[y-1][x] ==1 && gameboard[y-2][x]==2)
 	{
 		gameboard[y-1][x]=2;
 	}
@@ -740,8 +623,142 @@ int flipblack_north(int gameboard[N][N], int y, int x)
 		gameboard[y-4][x]=2;
 	}
 	
+	
+	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==2)
+	{
+		gameboard[y+1][x]=2;
+	}
+	
+	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==1 && gameboard[y+3][x]==2)
+	{
+		gameboard[y+1][x] =2;
+		gameboard[y+2][x]=2;
+	}
+	
+	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==1 && gameboard[y+3][x]==1 && gameboard[y+4][x]==2)
+	{
+		gameboard[y+1][x] =2;
+		gameboard[y+2][x]=2;
+		gameboard[y+3][x]=2;
+	}
+	
+	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==1 && gameboard[y+3][x]==1 && gameboard[y+4][x]==1 && gameboard[y+5][x]==2 )
+	{
+		gameboard[y+1][x] =2;
+		gameboard[y+2][x]=2;
+		gameboard[y+3][x]=2;
+		gameboard[y+4][x]=2; 
+	}
+	
+	
+	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==2)
+	{
+		gameboard[y-1][x+1]=2;
+	}
+	
+	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==2)
+	{
+		gameboard[y-1][x+1] =2;
+		gameboard[y-2][x+2]= 2;
+	}
+	
+	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==1 && gameboard[y-4][x+4]==2)
+	{
+		gameboard[y-1][x+1] =2;
+		gameboard[y-2][x+2]= 2;
+		gameboard[y-3][x+3]=2;
+	}
+	
+	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==1 && gameboard[y-4][x+4]==1 && gameboard[y-5][x+5]==2)
+	{
+		gameboard[y-1][x+1] =2;
+		gameboard[y-2][x+2]= 2;
+		gameboard[y-3][x+3]=2;
+		gameboard[y-4][x+4]=2;
+	}
+
+	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==2)
+	{
+		gameboard[y-1][x-1]=2;
+	}
+	
+	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==2)
+	{
+		gameboard[y-1][x-1] =2;
+		gameboard[y-2][x-2]= 2;
+	}
+	
+	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==1 && gameboard[y-4][x-4]==2)
+	{
+		gameboard[y-1][x-1] =2;
+		gameboard[y-2][x-2]= 2;
+		gameboard[y-3][x-3]=2;
+	}
+	
+	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==1 && gameboard[y-4][x-4]==1 && gameboard[y-5][x-5]==2)
+	{
+		gameboard[y-1][x-1] =2;
+		gameboard[y-2][x-2]= 2;
+		gameboard[y-3][x-3]=2;
+		gameboard[y-4][x-4]=2;
+	}
+	
+    
+	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==2)
+	{
+		gameboard[y+1][x+1]=1;
+	}
+	
+	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==1 && gameboard[y+3][x+3]==2)
+	{
+		gameboard[y+1][x+1] =2;
+		gameboard[y+2][x+2]= 2;
+	}
+	
+	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==1 && gameboard[y+3][x+3]==1 && gameboard[y+4][x+4]==2)
+	{
+		gameboard[y+1][x+1] =2;
+		gameboard[y+2][x+2]= 2;
+		gameboard[y+3][x+3]=2;
+	}
+	
+	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==1 && gameboard[y+3][x+3]==1 && gameboard[y+4][x+4]==1 && gameboard[y+5][x+5]==2)
+	{
+		gameboard[y+1][x+1] =2;
+		gameboard[y+2][x+2]= 2;
+		gameboard[y+3][x+3]=2;
+		gameboard[y+4][x+4]=2;
+	}
+   
+	
+    else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==2)
+	{
+		gameboard[y+1][x-1]=2;
+	}
+	
+	else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==1 && gameboard[y+3][x-3]==2)
+	{
+		gameboard[y+1][x-1] =2;
+		gameboard[y+2][x-2]= 2;
+	}
+	
+	else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==1 && gameboard[y+3][x-3]==1 && gameboard[y+4][x-4]==2)
+	{
+		gameboard[y+1][x-1] =2;
+		gameboard[y+2][x-2]= 2;
+		gameboard[y+3][x-3]=2;
+	}
+	
+	else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==1 && gameboard[y+3][x-3]==1 && gameboard[y+4][x-4]==1 && gameboard[y+5][x-5]==2)
+	{
+		gameboard[y+1][x-1] =2;
+		gameboard[y+2][x-2]= 2;
+		gameboard[y+3][x-3]=2;
+		gameboard[y+4][x-4]=2;
+	}
+	
 	return gameboard[N][N];
-} 
+}
 
 int nflipblack_north(int gameboard[N][N], int y, int x) 
 {
@@ -783,38 +800,6 @@ int nflipblack_north(int gameboard[N][N], int y, int x)
 	return flipnum;
 } 
 
-int flipblack_south(int gameboard[N][N], int y, int x)
-{
-	
-	if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==2)
-	{
-		gameboard[y+1][x]=2;
-	}
-	
-	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==1 && gameboard[y+3][x]==2)
-	{
-		gameboard[y+1][x] =2;
-		gameboard[y+2][x]=2;
-	}
-	
-	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==1 && gameboard[y+3][x]==1 && gameboard[y+4][x]==2)
-	{
-		gameboard[y+1][x] =2;
-		gameboard[y+2][x]=2;
-		gameboard[y+3][x]=2;
-	}
-	
-	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==1 && gameboard[y+3][x]==1 && gameboard[y+4][x]==1 && gameboard[y+5][x]==2 )
-	{
-		gameboard[y+1][x] =2;
-		gameboard[y+2][x]=2;
-		gameboard[y+3][x]=2;
-		gameboard[y+4][x]=2; 
-	}
-	
-	return gameboard[N][N];
-} 
-
 int nflipblack_south(int gameboard[N][N], int y, int x)
 {
 	int flipnum;
@@ -854,38 +839,85 @@ int nflipblack_south(int gameboard[N][N], int y, int x)
 	   
 	return flipnum;
 } 
-
-int flipblack_northeast(int gameboard[N][N], int y, int x)
+int nflipblack_east(int gameboard[N][N], int y, int x)
 {
-	if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==2)
+	int flipnum;
+	
+	if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==2)
 	{
-		gameboard[y-1][x+1]=2;
+		gameboard[y][x+1]=2;
+		flipnum +=1;
 	}
 	
-	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==2)
+	else if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==1 && gameboard[y][x+3]==2)
 	{
-		gameboard[y-1][x+1] =2;
-		gameboard[y-2][x+2]= 2;
+		gameboard[y][x+1]=2;
+		gameboard[y][x+2]=2;
+		flipnum+=2;
 	}
 	
-	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==1 && gameboard[y-4][x+4]==2)
+	else if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==1 && gameboard[y][x+3]==1 && gameboard[y][x+4]==2)
 	{
-		gameboard[y-1][x+1] =2;
-		gameboard[y-2][x+2]= 2;
-		gameboard[y-3][x+3]=2;
+		gameboard[y][x+1]=2;
+		gameboard[y][x+2]=2;
+		gameboard[y][x+3]=2;
+		flipnum +=3;
 	}
 	
-	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==1 && gameboard[y-4][x+4]==1 && gameboard[y-5][x+5]==2)
+	else if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==1 && gameboard[y][x+3]==1 && gameboard[y][x+4]==1 && gameboard[y][x+5]==2)
 	{
-		gameboard[y-1][x+1] =2;
-		gameboard[y-2][x+2]= 2;
-		gameboard[y-3][x+3]=2;
-		gameboard[y-4][x+4]=2;
+		gameboard[y][x+1]=2;
+		gameboard[y][x+2]=2;
+		gameboard[y][x+3]=2;
+		gameboard[y][x+4]=2;
+		flipnum+=4;
 	}
 	
-	return gameboard[N][N];
+	else
+	   flipnum= 0;
+	   
+	return flipnum;
+	
 } 
-
+int nflipblack_west(int gameboard[N][N], int y, int x)
+{
+	int flipnum;
+	
+	if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==2)
+	{
+		gameboard[y][x-1]=2;
+		flipnum +=1;
+	}
+	
+	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==1 && gameboard[y][x-3]==2)
+	{
+		gameboard[y][x-1] =2;
+		gameboard[y][x-2] =2;
+		flipnum +=2;
+	}
+	
+	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==1 && gameboard[y][x-3]==1 && gameboard[y][x-4]==2)
+	{
+		gameboard[y][x-1] =2;
+		gameboard[y][x-2] =2;
+		gameboard[y][x-3] =2;
+		flipnum +=3;
+	}
+	
+	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==1 && gameboard[y][x-3]==1 && gameboard[y][x-4]==1 && gameboard[y][x-5]==2)
+	{
+		gameboard[y][x-1]=2;
+		gameboard[y][x-2]=2;
+		gameboard[y][x-3]=2;
+		gameboard[y][x-4]=2;
+		flipnum+=4;
+	}
+	
+	else
+	   flipnum = 0;
+	   
+	return flipnum;
+} 
 int nflipblack_northeast(int gameboard[N][N], int y, int x)
 {
 	int flipnum;
@@ -926,37 +958,6 @@ int nflipblack_northeast(int gameboard[N][N], int y, int x)
 	return flipnum;
 } 
 
-int flipblack_northwest(int gameboard[N][N], int y, int x)
-{
-	
-	if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==2)
-	{
-		gameboard[y-1][x-1]=2;
-	}
-	
-	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==2)
-	{
-		gameboard[y-1][x-1] =2;
-		gameboard[y-2][x-2]= 2;
-	}
-	
-	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==1 && gameboard[y-4][x-4]==2)
-	{
-		gameboard[y-1][x-1] =2;
-		gameboard[y-2][x-2]= 2;
-		gameboard[y-3][x-3]=2;
-	}
-	
-	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==1 && gameboard[y-4][x-4]==1 && gameboard[y-5][x-5]==2)
-	{
-		gameboard[y-1][x-1] =2;
-		gameboard[y-2][x-2]= 2;
-		gameboard[y-3][x-3]=2;
-		gameboard[y-4][x-4]=2;
-	}
-	
-	return gameboard[N][N];
-} 
 
 int nflipblack_northwest(int gameboard[N][N], int y, int x)
 {
@@ -999,36 +1000,6 @@ int nflipblack_northwest(int gameboard[N][N], int y, int x)
 	return flipnum;
 } 
 
-int flipblack_southeast(int gameboard[N][N], int y, int x)
-{
-	if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==2)
-	{
-		gameboard[y+1][x+1]=1;
-	}
-	
-	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==1 && gameboard[y+3][x+3]==2)
-	{
-		gameboard[y+1][x+1] =2;
-		gameboard[y+2][x+2]= 2;
-	}
-	
-	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==1 && gameboard[y+3][x+3]==1 && gameboard[y+4][x+4]==2)
-	{
-		gameboard[y+1][x+1] =2;
-		gameboard[y+2][x+2]= 2;
-		gameboard[y+3][x+3]=2;
-	}
-	
-	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==1 && gameboard[y+3][x+3]==1 && gameboard[y+4][x+4]==1 && gameboard[y+5][x+5]==2)
-	{
-		gameboard[y+1][x+1] =2;
-		gameboard[y+2][x+2]= 2;
-		gameboard[y+3][x+3]=2;
-		gameboard[y+4][x+4]=2;
-	}
-    return gameboard[N][N];
-} 
-
 int nflipblack_southeast(int gameboard[N][N], int y, int x)
 {
 	int flipnum;
@@ -1068,38 +1039,6 @@ int nflipblack_southeast(int gameboard[N][N], int y, int x)
 	   
 	return flipnum;
 } 
-
-int flipblack_southwest(int gameboard[N][N], int y, int x)
-{
-	
-	if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==2)
-	{
-		gameboard[y+1][x-1]=2;
-	}
-	
-	else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==1 && gameboard[y+3][x-3]==2)
-	{
-		gameboard[y+1][x-1] =2;
-		gameboard[y+2][x-2]= 2;
-	}
-	
-	else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==1 && gameboard[y+3][x-3]==1 && gameboard[y+4][x-4]==2)
-	{
-		gameboard[y+1][x-1] =2;
-		gameboard[y+2][x-2]= 2;
-		gameboard[y+3][x-3]=2;
-	}
-	
-	else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==1 && gameboard[y+3][x-3]==1 && gameboard[y+4][x-4]==1 && gameboard[y+5][x-5]==2)
-	{
-		gameboard[y+1][x-1] =2;
-		gameboard[y+2][x-2]= 2;
-		gameboard[y+3][x-3]=2;
-		gameboard[y+4][x-4]=2;
-	}
-	
-	return gameboard[N][N];
-}
 
 int nflipblack_southwest(int gameboard[N][N], int y, int x)
 {
@@ -1251,34 +1190,33 @@ int main(int argc, char *argv[]) {
 		
 	    
 		  if (x<0 || x>5 || y<0 || y<5)
-	    	printf("Wrong coordinate. Try again: \n");
-			scanf("%d %d", &y,&x);
+	    	{
+	    		printf("Wrong coordinate. Try again: \n");
+			    scanf("%d %d", &y,&x);
+			}
 			
 		  else if(gameboard[y][x] !=0) 
-		    printf("Already occupied. Try again: \n");
-		    scanf("%d %d", &y,&x);
+		    {
+		    	printf("Already occupied. Try again: \n");
+		        scanf("%d %d", &y,&x);
+			}
 		     
 		  else if(nflipwhite_east(gameboard[N][N], y,x) ==0 && nflipwhite_west(gameboard[N][N], y,x) ==0 && nflipwhite_north(gameboard[N][N], y,x) ==0 && 
 				    nflipwhite_south(gameboard[N][N], y,x)==0 &&  nflipwhite_northeast(gameboard[N][N], y,x)==0 && nflipwhite_northwest(gameboard[N][N], y,x)==0
 					 && nflipwhite_southeast(gameboard[N][N], y,x) ==0 && nflipwhite_southeast(gameboard[N][N], y,x )==0) 
-		    printf("No possible flip. Try again: \n");
-		    scanf("%d %d", &y, &x); //좌표 입력에 오류가 있을 경우, 다시 받기 
+		    {
+			    printf("No possible flip. Try again: \n");
+		        scanf("%d %d", &y, &x); //좌표 입력에 오류가 있을 경우, 다시 받기
+			}
 		    
 		    
 		
 		    /*플레이어가 입력한 곳이 flip이 가능하다면, flip 하고 그 횟수 출력*/
-		    addMatrix(flipwhite_east(gameboard[N][N], y,x),
-			flipwhite_west(gameboard[N][N], y,x), 
-			flipwhite_north(gameboard[N][N], y,x), 
-			flipwhite_south(gameboard[N][N], y,x),
-			flipwhite_northeast(gameboard[N][N], y,x), 
-			flipwhite_southeast(gameboard[N][N], y,x) ,
-			flipwhite_northwest(gameboard[N][N], y,x), 
-			flipwhite_southwest(gameboard[N][N], y,x) );
+		    flipwhite(gameboard[N][N], y, x);
 			
-		    flip1_number = nflipwhite_east(gameboard[N][N], y,x) ==0 + nflipwhite_west(gameboard[N][N], y,x) ==0 + nflipwhite_north(gameboard[N][N], y,x) ==0 + 
-				    nflipwhite_south(gameboard[N][N], y,x)==0 +  nflipwhite_northeast(gameboard[N][N], y,x)==0 + nflipwhite_northwest(gameboard[N][N], y,x)==0
-					 + nflipwhite_southeast(gameboard[N][N], y,x) ==0 + nflipwhite_southeast(gameboard[N][N], y,x )==0) 
+		    flip1_number = nflipwhite_east(gameboard[N][N], y,x) + nflipwhite_west(gameboard[N][N], y,x) + nflipwhite_north(gameboard[N][N], y,x) + 
+				    nflipwhite_south(gameboard[N][N], y,x) +  nflipwhite_northeast(gameboard[N][N], y,x) + nflipwhite_northwest(gameboard[N][N], y,x)
+					 + nflipwhite_southeast(gameboard[N][N], y,x) +nflipwhite_southeast(gameboard[N][N], y,x )) ;
 		
 		    printf("Result of this turn.\n");
 		
@@ -1372,14 +1310,7 @@ int main(int argc, char *argv[]) {
 		    
 		
 		    /*플레이어가 입력한 곳이 flip이 가능하다면, flip 하고 그 횟수 출력*/
-		    addMatrix(flipblack_east(gameboard[N][N], y,x),
-			flipblack_west(gameboard[N][N], y,x), 
-			flipblack_north(gameboard[N][N], y,x), 
-			flipblack_south(gameboard[N][N], y,x),
-			flipblack_northeast(gameboard[N][N], y,x), 
-			flipblack_southeast(gameboard[N][N], y,x) ,
-			flipwblack_northwest(gameboard[N][N], y,x), 
-			flipblack_southwest(gameboard[N][N], y,x) );
+		    flipblack(gameboard[N][N], y,x);
 			
 		    flip2_number=nflipblack_east(gameboard[N][N], y,x) + nflipblack_west(gameboard[N][N], y,x) + nflipblack_north(gameboard[N][N], y,x) + 
 			    	nflipblack_south(gameboard[N][N], y,x) + nflipblack_northeast(gameboard[N][N], y,x) + nflipblack_southeast(gameboard[N][N], y,x)  +
