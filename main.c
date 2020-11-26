@@ -188,7 +188,7 @@ void flipwhite_northeast(void)
 		gameboard[y-1][x+1] =1;
 		gameboard[y-2][x+2]= 1;
 		gameboard[y-3][x+3]=1;
-		flipnum1_norhteast +=3;
+		flipnum1_northeast +=3;
 	}
 	
 	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==2 && gameboard[y-4][x+4]==2 && gameboard[y-5][x+5]==1)
@@ -228,7 +228,7 @@ void flipwhite_northwest(void)
 		gameboard[y-1][x-1] =1;
 		gameboard[y-2][x-2]= 1;
 		gameboard[y-3][x-3]=1;
-		flipnum1_norhtwest +=3;
+		flipnum1_northwest +=3;
 	}
 	
 	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==2 && gameboard[y-4][x-4]==2 && gameboard[y-5][x-5]==1)
@@ -419,7 +419,7 @@ void flipblack_north(void)
 	
 	else if(gameboard[y-1][x] ==1 && gameboard[y-2][x]==1 && gameboard[y-3][x]==2)
 	{
-		gameboard[y-1][x] 2;
+		gameboard[y-1][x] =2;
 		gameboard[y-2][x]=2;
 		flipnum2_north +=2;
 	}
@@ -509,7 +509,7 @@ void flipblack_northeast(void)
 		gameboard[y-1][x+1] =2;
 		gameboard[y-2][x+2]= 2;
 		gameboard[y-3][x+3]=2;
-		flipnum2_norhteast +=3;
+		flipnum2_northeast +=3;
 	}
 	
 	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==1 && gameboard[y-4][x+4]==1 && gameboard[y-5][x+5]==2)
@@ -549,7 +549,7 @@ void flipblack_northwest(void)
 		gameboard[y-1][x-1] =2;
 		gameboard[y-2][x-2]= 2;
 		gameboard[y-3][x-3]=2;
-		flipnum2_norhtwest +=3;
+		flipnum2_northwest +=3;
 	}
 	
 	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==1 && gameboard[y-4][x-4]==1 && gameboard[y-5][x-5]==2)
