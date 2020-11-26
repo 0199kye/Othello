@@ -84,7 +84,570 @@ void flipwhite_west(void)
 } 
 
 
- 	
+void flipwhite_north(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_north;
+	
+	if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==1)
+	{
+		gameboard[y-1][x]=1;
+		flipnum_north +=1;
+	}
+	
+	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==2 && gameboard[y-3][x]==1)
+	{
+		gameboard[y-1][x] =1;
+		gameboard[y-2][x]=1;
+		flipnum_north +=2;
+	}
+	
+	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==2 && gameboard[y-3][x]==2 && gameboard[y-4][x]==1)
+	{
+		gameboard[y-1][x] =1;
+		gameboard[y-2][x]=1;
+		gameboard[y-3][x]=1;
+		flipnum_north +=3;
+	}
+	
+	else if(gameboard[y-1][x] ==2 && gameboard[y-2][x]==2 && gameboard[y-3][x]==2 && gameboard[y-4][x]==2 && gameboard[y-5][x]==1)
+	{
+		gameboard[y-1][x] =1;
+		gameboard[y-2][x]=1;
+		gameboard[y-3][x]=1;
+		gameboard[y-4][x]=1; 
+		flipnum_north +=4;
+	}
+	
+	else
+	   flipnum_north = 0;
+} 
+
+void flipwhite_south(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_south;
+	
+	if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==1)
+	{
+		gameboard[y+1][x]=1;
+		flipnum_south +=1;
+	}
+	
+	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==2 && gameboard[y+3][x]==1)
+	{
+		gameboard[y+1][x] =1;
+		gameboard[y+2][x]=1;
+		flipnum_south +=2;
+	}
+	
+	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==2 && gameboard[y+3][x]==2 && gameboard[y+4][x]==1)
+	{
+		gameboard[y+1][x] =1;
+		gameboard[y+2][x]=1;
+		gameboard[y+3][x]=1;
+		flipnum_south +=3;
+	}
+	
+	else if(gameboard[y+1][x] ==2 && gameboard[y+2][x]==2 && gameboard[y+3][x]==2 && gameboard[y+4][x]==2 && gameboard[y+5][x]==1 )
+	{
+		gameboard[y+1][x] =1;
+		gameboard[y+2][x]=1;
+		gameboard[y+3][x]=1;
+		gameboard[y+4][x]=1; 
+		flipnum_south +=4;
+	}
+	
+	else
+	   flipnum_south = 0;
+} 
+
+void flipwhite_northeast(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_northeast;
+	
+	if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==1)
+	{
+		gameboard[y-1][x+1]=1;
+		flipnum_northeast +=1;
+	}
+	
+	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==1)
+	{
+		gameboard[y-1][x+1] =1;
+		gameboard[y-2][x+2]= 1;
+		flipnum_northeast +=2;
+	}
+	
+	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==2 && gameboard[y-4][x+4]==1)
+	{
+		gameboard[y-1][x+1] =1;
+		gameboard[y-2][x+2]= 1;
+		gameboard[y-3][x+3]=1;
+		flipnum_norhteast +=3;
+	}
+	
+	else if(gameboard[y-1][x+1] ==2 && gameboard[y-2][x+2]==2 && gameboard[y-3][x+3]==2 && gameboard[y-4][x+4]==2 && gameboard[y-5][x+5]==1)
+	{
+		gameboard[y-1][x+1] =1;
+		gameboard[y-2][x+2]= 1;
+		gameboard[y-3][x+3]=1;
+		gameboard[y-4][x+4]=1;
+		flipnum_northeast +=4;
+	}
+	
+	else
+	   flipnum_northeast = 0;
+} 
+
+void flipwhite_northwest(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_northwest;
+	
+	if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==1)
+	{
+		gameboard[y-1][x-1]=1;
+		flipnum_northwest +=1;
+	}
+	
+	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==1)
+	{
+		gameboard[y-1][x-1] =1;
+		gameboard[y-2][x-2]= 1;
+		flipnum_northwest +=2;
+	}
+	
+	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==2 && gameboard[y-4][x-4]==1)
+	{
+		gameboard[y-1][x-1] =1;
+		gameboard[y-2][x-2]= 1;
+		gameboard[y-3][x-3]=1;
+		flipnum_norhtwest +=3;
+	}
+	
+	else if(gameboard[y-1][x-1] ==2 && gameboard[y-2][x-2]==2 && gameboard[y-3][x-3]==2 && gameboard[y-4][x-4]==2 && gameboard[y-5][x-5]==1)
+	{
+		gameboard[y-1][x-1] =1;
+		gameboard[y-2][x-2]= 1;
+		gameboard[y-3][x-3]=1;
+		gameboard[y-4][x-4]=1;
+		flipnum_northwest +=4;
+	}
+	
+	else
+	   flipnum_northwest = 0;
+} 
+
+void flipwhite_southeast(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_southeast;
+	
+	if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==1)
+	{
+		gameboard[y+1][x+1]=1;
+		flipnum_southeast +=1;
+	}
+	
+	else if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==2 && gameboard[y+3][x+3]==1)
+	{
+		gameboard[y+1][x+1] =1;
+		gameboard[y+2][x+2]= 1;
+		flipnum_southeast +=2;
+	}
+	
+	else if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==2 && gameboard[y+3][x+3]==2 && gameboard[y+4][x+4]==1)
+	{
+		gameboard[y+1][x+1] =1;
+		gameboard[y+2][x+2]= 1;
+		gameboard[y+3][x+3]=1;
+		flipnum_southeast +=3;
+	}
+	
+	else if(gameboard[y+1][x+1] ==2 && gameboard[y+2][x+2]==2 && gameboard[y+3][x+3]==2 && gameboard[y+4][x+4]==2 && gameboard[y+5][x+5]==1)
+	{
+		gameboard[y+1][x+1] =1;
+		gameboard[y+2][x+2]= 1;
+		gameboard[y+3][x+3]=1;
+		gameboard[y+4][x+4]=1;
+		flipnum_southeast +=4;
+	}
+	
+	else
+	   flipnum_southeast = 0;
+} 
+
+void flipwhite_southwest(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_southwest;
+	
+	if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==1)
+	{
+		gameboard[y+1][x-1]=1;
+		flipnum_southwest +=1;
+	}
+	
+	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==2 && gameboard[y+3][x-3]==1)
+	{
+		gameboard[y+1][x-1] =1;
+		gameboard[y+2][x-2]= 1;
+		flipnum_southwest +=2;
+	}
+	
+	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==2 && gameboard[y+3][x-3]==2 && gameboard[y+4][x-4]==1)
+	{
+		gameboard[y+1][x-1] =1;
+		gameboard[y+2][x-2]= 1;
+		gameboard[y+3][x-3]=1;
+		flipnum_southwest +=3;
+	}
+	
+	else if(gameboard[y+1][x-1] ==2 && gameboard[y+2][x-2]==2 && gameboard[y+3][x-3]==2 && gameboard[y+4][x-4]==2 && gameboard[y+5][x-5]==1)
+	{
+		gameboard[y+1][x-1] =1;
+		gameboard[y+2][x-2]= 1;
+		gameboard[y+3][x-3]=1;
+		gameboard[y+4][x-4]=1;
+		flipnum_southwest +=4;
+	}
+	
+	else
+	   flipnum_southwest = 0;
+}//하얀색 8방향에 대한 뒤집기 
+
+void flipblack_east(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_east;
+	
+	if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==2)
+	{
+		gameboard[y][x+1]=2;
+		flipnum_east +=1;
+	}
+	
+	else if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==1 && gameboard[y][x+3]==2)
+	{
+		gameboard[y][x+1]=2;
+		gameboard[y][x+2]=2;
+		flipnum_east +=2;
+	}
+	
+	else if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==1 && gameboard[y][x+3]==1 && gameboard[y][x+4]==2)
+	{
+		gameboard[y][x+1]=2;
+		gameboard[y][x+2]=2;
+		gameboard[y][x+3]=2;
+		flipnum_east +=3;
+	}
+	
+	else if(gameboard[y][x+1] ==1 && gameboard[y][x+2]==1 && gameboard[y][x+3]==1 && gameboard[y][x+4]==1 && gameboard[y][x+5]==2)
+	{
+		gameboard[y][x+1]=2;
+		gameboard[y][x+2]=2;
+		gameboard[y][x+3]=2;
+		gameboard[y][x+4]=2;
+		flipnum_east +=4;
+	}
+	
+	else
+	   flipnum_east = 0;
+} 
+
+void flipblack_west(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_west;
+	
+	if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==2)
+	{
+		gameboard[y][x-1]=2;
+		flipnum_west +=1;
+	}
+	
+	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==1 && gameboard[y][x-3]==2)
+	{
+		gameboard[y][x-1] =2;
+		gameboard[y][x-2] =2;
+		flipnum_west +=2;
+	}
+	
+	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==1 && gameboard[y][x-3]==1 && gameboard[y][x-4]==2)
+	{
+		gameboard[y][x-1] =2;
+		gameboard[y][x-2] =2;
+		gameboard[y][x-3] =2;
+		flipnum_west +=3;
+	}
+	
+	else if(gameboard[y][x-1] ==1 && gameboard[y][x-2]==1 && gameboard[y][x-3]==1 && gameboard[y][x-4]==1 && gameboard[y][x-5]==2)
+	{
+		gameboard[y][x-1]=2;
+		gameboard[y][x-2]=2;
+		gameboard[y][x-3]=2;
+		gameboard[y][x-4]=2;
+		flipnum_west +=4;
+	}
+	
+	else
+	   flipnum_west = 0;
+} 
+
+
+void flipblack_north(void) 
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_north;
+	
+	if(gameboard[y-1][x] ==1 && gameboard[y-2][x]==2)
+	{
+		gameboard[y-1][x]=2;
+		flipnum_north +=1;
+	}
+	
+	else if(gameboard[y-1][x] ==1 && gameboard[y-2][x]==1 && gameboard[y-3][x]==2)
+	{
+		gameboard[y-1][x] 2;
+		gameboard[y-2][x]=2;
+		flipnum_north +=2;
+	}
+	
+	else if(gameboard[y-1][x] ==1 && gameboard[y-2][x]==1 && gameboard[y-3][x]==1 && gameboard[y-4][x]==2)
+	{
+		gameboard[y-1][x] =2;
+		gameboard[y-2][x]=2;
+		gameboard[y-3][x]=2;
+		flipnum_north +=3;
+	}
+	
+	else if(gameboard[y-1][x] ==1 && gameboard[y-2][x]==1 && gameboard[y-3][x]==1 && gameboard[y-4][x]==1 && gameboard[y-5][x]==2)
+	{
+		gameboard[y-1][x] =2;
+		gameboard[y-2][x]=2;
+		gameboard[y-3][x]=2;
+		gameboard[y-4][x]=2; 
+		flipnum_north +=4;
+	}
+	
+	else
+	   flipnum_north = 0;
+} 
+
+void flipblack_south(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_south;
+	
+	if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==2)
+	{
+		gameboard[y+1][x]=2;
+		flipnum_south +=1;
+	}
+	
+	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==1 && gameboard[y+3][x]==2)
+	{
+		gameboard[y+1][x] =2;
+		gameboard[y+2][x]=2;
+		flipnum_south +=2;
+	}
+	
+	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==1 && gameboard[y+3][x]==1 && gameboard[y+4][x]==2)
+	{
+		gameboard[y+1][x] =2;
+		gameboard[y+2][x]=2;
+		gameboard[y+3][x]=2;
+		flipnum_south +=3;
+	}
+	
+	else if(gameboard[y+1][x] ==1 && gameboard[y+2][x]==1 && gameboard[y+3][x]==1 && gameboard[y+4][x]==1 && gameboard[y+5][x]==2 )
+	{
+		gameboard[y+1][x] =2;
+		gameboard[y+2][x]=2;
+		gameboard[y+3][x]=2;
+		gameboard[y+4][x]=2; 
+		flipnum_south +=4;
+	}
+	
+	else
+	   flipnum_south = 0;
+} 
+
+void flipblack_northeast(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_northeast;
+	
+	if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==2)
+	{
+		gameboard[y-1][x+1]=2;
+		flipnum_northeast +=1;
+	}
+	
+	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==2)
+	{
+		gameboard[y-1][x+1] =2;
+		gameboard[y-2][x+2]= 2;
+		flipnum_northeast +=2;
+	}
+	
+	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==1 && gameboard[y-4][x+4]==2)
+	{
+		gameboard[y-1][x+1] =2;
+		gameboard[y-2][x+2]= 2;
+		gameboard[y-3][x+3]=2;
+		flipnum_norhteast +=3;
+	}
+	
+	else if(gameboard[y-1][x+1] ==1 && gameboard[y-2][x+2]==1 && gameboard[y-3][x+3]==1 && gameboard[y-4][x+4]==1 && gameboard[y-5][x+5]==2)
+	{
+		gameboard[y-1][x+1] =2;
+		gameboard[y-2][x+2]= 2;
+		gameboard[y-3][x+3]=2;
+		gameboard[y-4][x+4]=2;
+		flipnum_northeast +=4;
+	}
+	
+	else
+	   flipnum_northeast = 0;
+} 
+
+void flipblack_northwest(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_northwest;
+	
+	if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==2)
+	{
+		gameboard[y-1][x-1]=2;
+		flipnum_northwest +=1;
+	}
+	
+	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==2)
+	{
+		gameboard[y-1][x-1] =2;
+		gameboard[y-2][x-2]= 2;
+		flipnum_northwest +=2;
+	}
+	
+	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==1 && gameboard[y-4][x-4]==2)
+	{
+		gameboard[y-1][x-1] =2;
+		gameboard[y-2][x-2]= 2;
+		gameboard[y-3][x-3]=2;
+		flipnum_norhtwest +=3;
+	}
+	
+	else if(gameboard[y-1][x-1] ==1 && gameboard[y-2][x-2]==1 && gameboard[y-3][x-3]==1 && gameboard[y-4][x-4]==1 && gameboard[y-5][x-5]==2)
+	{
+		gameboard[y-1][x-1] =2;
+		gameboard[y-2][x-2]= 2;
+		gameboard[y-3][x-3]=2;
+		gameboard[y-4][x-4]=2;
+		flipnum_northwest +=4;
+	}
+	
+	else
+	   flipnum_northwest = 0;
+} 
+
+void flipblack_southeast(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_southeast;
+	
+	if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==2)
+	{
+		gameboard[y+1][x+1]=1;
+		flipnum_southeast +=1;
+	}
+	
+	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==1 && gameboard[y+3][x+3]==2)
+	{
+		gameboard[y+1][x+1] =2;
+		gameboard[y+2][x+2]= 2;
+		flipnum_southeast +=2;
+	}
+	
+	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==1 && gameboard[y+3][x+3]==1 && gameboard[y+4][x+4]==2)
+	{
+		gameboard[y+1][x+1] =2;
+		gameboard[y+2][x+2]= 2;
+		gameboard[y+3][x+3]=2;
+		flipnum_southeast +=3;
+	}
+	
+	else if(gameboard[y+1][x+1] ==1 && gameboard[y+2][x+2]==1 && gameboard[y+3][x+3]==1 && gameboard[y+4][x+4]==1 && gameboard[y+5][x+5]==2)
+	{
+		gameboard[y+1][x+1] =2;
+		gameboard[y+2][x+2]= 2;
+		gameboard[y+3][x+3]=2;
+		gameboard[y+4][x+4]=2;
+		flipnum_southeast +=4;
+	}
+	
+	else
+	   flipnum_southeast = 0;
+} 
+
+void flipblack_southwest(void)
+{
+	int y,x;
+	int gameboard[N][N];
+	int flipnum_southwest;
+	
+	if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==2)
+	{
+		gameboard[y+1][x-1]=2;
+		flipnum_southwest +=1;
+	}
+	
+	else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==1 && gameboard[y+3][x-3]==2)
+	{
+		gameboard[y+1][x-1] =2;
+		gameboard[y+2][x-2]= 2;
+		flipnum_southwest +=2;
+	}
+	
+	else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==1 && gameboard[y+3][x-3]==1 && gameboard[y+4][x-4]==2)
+	{
+		gameboard[y+1][x-1] =2;
+		gameboard[y+2][x-2]= 2;
+		gameboard[y+3][x-3]=2;
+		flipnum_southwest +=3;
+	}
+	
+	else if(gameboard[y+1][x-1] ==1 && gameboard[y+2][x-2]==1 && gameboard[y+3][x-3]==1 && gameboard[y+4][x-4]==1 && gameboard[y+5][x-5]==2)
+	{
+		gameboard[y+1][x-1] =2;
+		gameboard[y+2][x-2]= 2;
+		gameboard[y+3][x-3]=2;
+		gameboard[y+4][x-4]=2;
+		flipnum_southwest +=4;
+	}
+	
+	else
+	   flipnum_southwest = 0;
+} 
+
+
+
+
 int main(int argc, char *argv[]) {
 	
 	int gameboard [N][N]= {
@@ -101,17 +664,8 @@ int main(int argc, char *argv[]) {
 	int turn = 1;
 	int white = 1;
 	int black = 2; 
-	int flip;
 	int flip_number;
 	 
-	int east = gameboard [y][x+1];
-	int west = gameboard [y][x-1];
-	int north = gameboard [y-1][x];
-	int south = gameboard [y+1][x];
-	int northeast = gameboard [y-1][x+1];
-	int northwest = gameboard [y-1][x-1];
-	int southeast = gameboard [y+1][x+1];
-	int southwest = gameboard [y+1][x-1]; //방향에 대한 정의  
 	
 	int flipnum_east;
 	int flipnum_west;
